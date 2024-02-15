@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class array {
     public static void main(String[] args) {
 
@@ -52,7 +53,7 @@ public class array {
         /*respostas[0] = 'a';respostas[1] = 'b';respostas[2] = 'd';respostas[3] = 'd';respostas[4] = 'b';*/
 
         for(int i = 0; i <TAM; i++){//pedindo a resposta atraves de um loop
-            System.out.printf("informe a nota %d:",i);
+            System.out.printf("informe a alternativa %d:",i);
             respostas[i] = ler.nextLine().charAt(0);
         }
 
@@ -62,6 +63,53 @@ public class array {
             }
         }
         System.out.printf("%nA nota do aluno foi: %d",nota);
+
+        final int TAMA = 10;
+        int[] num={2,1,4,3,6,8,9,7,5,0};
+        int[] numeros = new int[TAMA];
+        int p = 3;
+
+        /*//For normal
+        for(int i = 0;i < num.length;i++){
+            System.out.printf("%d - ",num[i]);
+        }*/
+        System.out.println("\n");
+
+
+        //metodo de ordernar um array
+        //Arrays.sort(num);
+
+        //metodo preencher arrays
+        //Arrays.fill(numeros,5);
+
+        //metodo para copiar array
+        System.arraycopy(num, 0, numeros, 0, TAMA);
+
+        System.out.println();
+        System.out.print("imprimindo o array num[]: ");
+        //For somente para leitura
+        for(int n:num){
+            System.out.printf("%d ",n);
         }
+
+        System.out.println();
+        System.out.print("imprimindo o array numeros[]: ");
+        for(int n:numeros){
+            System.out.printf("%d ",n);
+        }
+        System.out.println("\n");
+
+        //metodo comparação de arrays
+        System.out.printf("Arrays sao iguais:%s",Arrays.equals(num, numeros) ? "sim":"nao ");
+
+        System.out.println();
+        //metodo comparação de arrays, mas para acontecer tem que ordernar o array primeiro.
+        Arrays.sort(num);
+        int posicao;
+        posicao = Arrays.binarySearch(num, p);
+
+        System.out.printf("o elemento %d esta no array? %s e na posicao %d",p, posicao > 0 ? "sim" : "nao ",posicao);
+
+    }
 }
 
