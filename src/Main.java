@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -80,6 +81,21 @@ public class Main {
         System.out.println(   j    +    " - agora eh um int");
 
         System.out.println(" ");
+
+
+        //entradas
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("INFORME UM NOME: ");
+        String Fname = scanner.nextLine();
+        //String Lname = scanner.next();
+        System.out.println("o nome eh: "+ Fname +"  !!");
+
+        //System.out.print("INFORME UM Numero: ");+ Lname+
+
+
+
+
 
         //POO
 
